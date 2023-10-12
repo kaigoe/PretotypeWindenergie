@@ -24,10 +24,11 @@
 
         .windmill-animation {
             display: inline-block;
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             background-image: url('windmill-image.png');
             animation: spin 4s linear infinite;
+            z-index: 0;
         }
 
         @keyframes spin {
@@ -70,6 +71,10 @@
             border: 1px solid #888;
             width: 50%;
         }
+
+        .buttonNo {
+            background: red;
+        }
     </style>
 </head>
 
@@ -79,6 +84,7 @@
 <div class="windmill-animation"></div>
 <p>Windenergie ist eine der effizientesten und umweltfreundlichsten Energiequellen der Welt.</p>
 <button onclick="startQuiz()">Ich unterstütze Windenergie</button>
+<button onclick="startQuiz()" class="buttonNo">Ich unterstütze Windenergie nicht</button>
 
 <!-- Das Quiz-Modal -->
 <div class="quiz-modal" id="quizModal">
