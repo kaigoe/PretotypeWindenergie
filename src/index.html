@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Kraft der Windenergie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f7fb;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #2b7d6e;
+        }
+
+        p {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .windmill-animation {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-image: url('windmill-image.png');
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #2b7d6e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #20594d;
+        }
+
+        .quiz-modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .quiz-content {
+            background-color: #f2f7fb;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Entdecken Sie die unglaubliche Kraft der Windenergie!</h1>
+<p>Windräder sind ein Symbol für saubere und nachhaltige Energiegewinnung.</p>
+<div class="windmill-animation"></div>
+<p>Windenergie ist eine der effizientesten und umweltfreundlichsten Energiequellen der Welt.</p>
+<button onclick="startQuiz()">Ich unterstütze Windenergie</button>
+
+<!-- Das Quiz-Modal -->
+<div class="quiz-modal" id="quizModal">
+    <div class="quiz-content">
+        <h2>Quiz über Windenergie</h2>
+        <p>Frage 1: Welchen Anteil am globalen Energieverbrauch deckt Windenergie?</p>
+        <!-- Multiple-Choice-Antworten mit Checkboxen -->
+
+        <button onclick="closeQuiz()">3%</button>
+        <button onclick="closeQuiz()">10%</button>
+        <button onclick="closeQuiz()">25%</button>
+
+    </div>
+</div>
+
+<script>
+    function startQuiz() {
+        document.getElementById('quizModal').style.display = 'block';
+    }
+
+    function closeQuiz() {
+        document.getElementById('quizModal').style.display = 'none';
+    }
+</script>
+</body>
+
+</html>
